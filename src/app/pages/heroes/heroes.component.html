@@ -1,0 +1,20 @@
+
+<section class="page-heroes animated fadeIn fast">
+    <div class="container">
+        <h1 class="mb-3">Heroes <small>Marvel y DC</small></h1>
+
+        <div class="card-columns">
+            <div class="card" *ngFor="let heroe of heroes; let i = index">
+                <img [src]="heroe.img" class="card-img-top" [alt]="heroe.nombre">
+                <div class="card-body">
+                  <h5 class="card-title">{{ heroe.nombre }}</h5>
+                  <p class="card-text">{{ heroe.bio }}</p>
+                  <p class="card-text"><small class="text-muted">{{ heroe.aparicion }}</small></p>
+
+                  <button class="btn btn-primary btn-block" (click)="getTheHeroe(i)">Ver más</button>
+                </div>
+              </div>
+        </div>
+
+    </div>
+</section>
